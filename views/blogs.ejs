@@ -1,0 +1,9 @@
+<%- include('partials/header'); -%>
+
+<h1 style="font-family: 'Creepster', cursive;color: #1abc9c "> <%= TITLE %> </h1>
+<%  for(var i=0;i<POSTS.length;i++){   %>
+    <h3><b> <%= i+1 %>.)&nbsp; <%= POSTS[i][0] %></b> </h3>
+    <pre  style="width:132rem;height:10rem;white-space: pre-line;"><%= POSTS[i][1].slice(0,200) %></pre> <a href = "/post/<%= POSTS[i][0] %>">  &nbsp; more..</a>
+ <%  }   %>
+<%- include('partials/footer'); -%>
+    
